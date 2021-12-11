@@ -46,7 +46,7 @@
         </div>
       </template>
     </v-navigation-drawer>
-    <v-app-bar fixed app>
+    <v-app-bar fixed app elevate-on-scroll scroll-target="#scrolling-techniques-7">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -167,22 +167,27 @@ export default {
         {
           title: 'Cart',
           icon: 'mdi-cart-outline',
-          to: '/cart',
+          to: '/Cart',
         },
         {
           title: 'My Orders',
           icon: 'mdi-bookmark-outline',
-          to: '/cart',
+          to: '/MyOrders',
+        },
+        {
+          title: 'Wish List',
+          icon: 'mdi-heart-outline',
+          to: '/Wishlist',
         },
         {
           title: 'Contact',
           icon: 'mdi-email-outline',
-          to: '/contact',
+          to: '/Contact',
         },
         {
           title: 'About',
           icon: 'mdi-account-outline',
-          to: '/about',
+          to: '/About',
         },
       ],
       miniVariant: false,
