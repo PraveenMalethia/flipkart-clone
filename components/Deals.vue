@@ -5,7 +5,7 @@
       <v-icon class="ml-2"> mdi-clock-outline</v-icon>
       <span class="ml-2">{{ time }}</span>
       <v-spacer></v-spacer>
-      <v-btn depressed color="primary">View All</v-btn>
+      <v-btn depressed color="primary" outlined>View All</v-btn>
     </v-toolbar>
     <v-slide-group v-model="model" class="pa-2" active-class="success">
       <v-slide-item v-for="n in 15" :key="n">

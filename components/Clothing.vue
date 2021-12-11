@@ -4,7 +4,7 @@
       <v-toolbar-title>Clothing </v-toolbar-title>
       <v-icon class="ml-2"> mdi-hanger</v-icon>
       <v-spacer></v-spacer>
-      <v-btn depressed color="primary"> View All<v-icon>mdi-chevron-right</v-icon>  </v-btn>
+      <v-btn depressed color="primary" outlined> View All<v-icon>mdi-chevron-right</v-icon>  </v-btn>
     </v-toolbar>
     <v-slide-group v-model="model" class="pa-2" active-class="success">
       <v-slide-item v-for="n in 15" :key="n">
