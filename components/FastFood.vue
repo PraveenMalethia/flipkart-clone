@@ -1,11 +1,10 @@
 <template>
   <v-sheet class="mx-auto" elevation="0">
-    <v-toolbar dense>
-      <v-toolbar-title>Deals of the day </v-toolbar-title>
-      <v-icon class="ml-2"> mdi-clock </v-icon>
-      <span class="ml-2">{{ time }}</span>
+    <v-toolbar dense rounded elevation="0">
+      <v-toolbar-title>Yummy Food </v-toolbar-title>
+      <v-icon class="ml-2"> mdi-food-outline</v-icon>
       <v-spacer></v-spacer>
-      <v-btn depressed> View All </v-btn>
+      <v-btn depressed color="primary"> View All<v-icon>mdi-chevron-right</v-icon> </v-btn>
     </v-toolbar>
     <v-slide-group v-model="model" class="pa-2" active-class="success">
       <v-slide-item v-for="n in 15" :key="n">
@@ -22,6 +21,7 @@
 export default {
   data: () => ({
     model: null,
+    page:1,
     loading: false,
     time: new Date().toLocaleTimeString(),
   }),

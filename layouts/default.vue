@@ -3,15 +3,11 @@
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" fixed app>
       <v-list dense nav>
         <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Basketiya
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Your Nearby Store
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="text-h6"> Basketiya </v-list-item-title>
+            <v-list-item-subtitle> Your Nearby Store </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -54,14 +50,18 @@
         solo-inverted
       ></v-autocomplete>
       <v-spacer />
-      <v-btn depressed :icon="$vuetify.breakpoint.sm" class="mr-2">
-        <v-icon>mdi-login</v-icon> <span class="hidden-sm-only hidden-xs-only">Login</span>
+      <v-btn depressed :icon="$vuetify.breakpoint.xs" class="mr-2">
+        <v-icon>mdi-login</v-icon>
+        <span class="hidden-sm-only hidden-xs-only">Login</span>
       </v-btn>
-      <v-btn depressed :icon="$vuetify.breakpoint.sm" class="mr-2">
-        <v-icon>mdi-account</v-icon><span class="hidden-sm-only hidden-xs-only">Account</span>
+      <v-btn depressed :icon="$vuetify.breakpoint.xs" class="mr-2">
+        <v-icon>mdi-account-outline</v-icon
+        ><span class="hidden-sm-only hidden-xs-only">Account</span>
       </v-btn>
-      <v-btn depressed :icon="$vuetify.breakpoint.sm" class="mr-2">
-        <v-icon>mdi-cart</v-icon><span class="hidden-sm-only hidden-xs-only">Cart</span>
+      <v-btn depressed :icon="$vuetify.breakpoint.xs" class="mr-2">
+        <v-icon>mdi-cart-outline</v-icon
+        ><span class="hidden-sm-only hidden-xs-only">Cart</span>
+        <v-badge color="blue" content="6" class="ml-2"> </v-badge>
       </v-btn>
     </v-app-bar>
     <v-main>
@@ -77,28 +77,6 @@ export default {
       loading: false,
       searchItems: [],
       selectedItem: 1,
-      Menus: [
-        {
-          title: 'Home',
-          icon: 'mdi-home',
-          to: '/',
-        },
-        {
-          title: 'About',
-          icon: 'mdi-account',
-          to: '/about',
-        },
-        {
-          title: 'Contact',
-          icon: 'mdi-email',
-          to: '/contact',
-        },
-        {
-          title: 'Cart',
-          icon: 'mdi-cart',
-          to: '/cart',
-        },
-      ],
       search: null,
       select: null,
       states: [
@@ -165,9 +143,29 @@ export default {
       drawer: false,
       items: [
         {
-          icon: 'mdi-home',
+          icon: 'mdi-home-outline',
           title: 'Home',
           to: '/',
+        },
+        {
+          title: 'Cart',
+          icon: 'mdi-cart-outline',
+          to: '/cart',
+        },
+        {
+          title: 'My Orders',
+          icon: 'mdi-bookmark-outline',
+          to: '/cart',
+        },
+        {
+          title: 'Contact',
+          icon: 'mdi-email-outline',
+          to: '/contact',
+        },
+        {
+          title: 'About',
+          icon: 'mdi-account-outline',
+          to: '/about',
         },
       ],
       miniVariant: false,

@@ -9,21 +9,8 @@
       v-for="(slide, i) in slides"
       :key="i"
       dark
+      src="/car1.jpg"
     >
-      <v-sheet
-        :color="colors[i]"
-        height="100%"
-      >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
-        >
-          <div class="text-h2">
-            {{ slide }} Slide
-          </div>
-        </v-row>
-      </v-sheet>
     </v-carousel-item>
   </v-carousel>
 </template>
