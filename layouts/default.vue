@@ -8,6 +8,16 @@
             <v-list-item-subtitle> Your Nearby Store </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-switch
+              v-model="$vuetify.theme.dark"
+              inset
+              class="mt-5 ml-10"
+              label="Dark Mode"
+            ></v-switch>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -16,6 +26,13 @@
           exact
         >
           <v-list-item-action dense>
+            <v-badge
+              v-if="item.icon === 'mdi-cart-outline'"
+              color="blue"
+              content="6"
+              class="ml-2 mt-1"
+            >
+            </v-badge>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
