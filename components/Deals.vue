@@ -1,5 +1,5 @@
 <template>
-  <v-sheet class="mx-auto" elevation="0">
+  <div class="mt-2">
     <v-toolbar dense rounded elevation="0">
       <v-toolbar-title>Deals of the day </v-toolbar-title>
       <v-icon class="ml-2"> mdi-clock-outline</v-icon>
@@ -10,12 +10,9 @@
     <v-slide-group v-model="model" class="pa-2" active-class="success">
       <v-slide-item v-for="n in 15" :key="n">
         <Product />
-        <!-- <v-card class="ma-1" >
-          
-        </v-card> -->
       </v-slide-item>
     </v-slide-group>
-  </v-sheet>
+  </div>
 </template>
 
 <script>

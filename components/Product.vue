@@ -1,10 +1,13 @@
 <template>
   <v-hover v-slot="{ hover }" class="mt-2 ma-1">
-    <v-card class="ma-1" color="grey lighten-4" elevation="0" height="250" width="200">
-      <v-img
-        :aspect-ratio="16 / 14"
-        src="/product1.jpg"
-      >
+    <v-card
+      class="ma-1"
+      color="grey lighten-4"
+      elevation="0"
+      height="250"
+      width="200"
+    >
+      <v-img :aspect-ratio="16 / 14" src="/product1.jpg">
         <v-expand-transition>
           <div
             v-if="hover"
@@ -32,13 +35,7 @@
         <div class="font-weight-light black--text font-bold mb-2">
           Designer Shoes
         </div>
-        <p class=" font-weight-bold green--text mb-2">
-          30% off
-        </p>
-        <!-- <div class="font-weight-light text-sm mb-2">
-          Our Vintage kitchen utensils delight any chef.<br />
-          Made of bamboo by hand
-        </div> -->
+        <p class="font-weight-bold green--text mb-2">30% off</p>
       </v-card-text>
     </v-card>
   </v-hover>

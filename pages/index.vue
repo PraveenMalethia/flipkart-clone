@@ -1,12 +1,12 @@
 <template>
   <div class="pa-2">
-    <Categories />
-    <Carousel />
     <!-- <v-row justify="center" align="center">
       <v-col cols="12" sm="8" md="12">
         <v-card class="logo py-4 d-flex justify-center"> </v-card>
       </v-col>
     </v-row> -->
+    <Categories />
+    <Carousel />
     <Deals />
     <Clothing />
     <FastFood />
@@ -23,7 +23,7 @@
 export default {
   data: () => ({
     model: null,
-    page:1,
+    page: 1,
     loading: false,
     time: new Date().toLocaleTimeString(),
   }),

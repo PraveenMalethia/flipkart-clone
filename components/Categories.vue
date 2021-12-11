@@ -1,5 +1,4 @@
 <template>
-  <v-sheet class="mx-auto" elevation="0">
     <v-slide-group v-model="model" class="pa-2" active-class="success">
       <v-slide-item v-for="(item, i) in categories" :key="i">
         <v-card link class="justify-center ma-1">
@@ -15,7 +14,6 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
-  </v-sheet>
 </template>
 
 <script>
