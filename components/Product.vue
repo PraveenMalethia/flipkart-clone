@@ -34,7 +34,7 @@
           <v-icon>mdi-cart-outline</v-icon>
         </v-btn>
         <div class="font-weight-light black--text font-bold mb-2">
-          Designer Shoes
+          {{ product_image == 'feature4.jpg' ? 'Iphone' :'Designer Shoes'}}
         </div>
         <p class="font-weight-bold green--text mb-2">30% off</p>
       </v-card-text>
