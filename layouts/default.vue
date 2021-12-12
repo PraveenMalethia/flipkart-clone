@@ -67,15 +67,15 @@
         solo-inverted
       ></v-autocomplete>
       <v-spacer />
-      <v-btn depressed :icon="$vuetify.breakpoint.xs" class="mr-2">
+      <v-btn text :icon="$vuetify.breakpoint.xs" class="mr-2">
         <v-icon>mdi-login</v-icon>
         <span class="hidden-sm-only hidden-xs-only">Login</span>
       </v-btn>
-      <v-btn depressed :icon="$vuetify.breakpoint.xs" class="mr-2">
+      <v-btn text :icon="$vuetify.breakpoint.xs" class="mr-2">
         <v-icon>mdi-account-outline</v-icon
         ><span class="hidden-sm-only hidden-xs-only">Account</span>
       </v-btn>
-      <v-btn depressed :icon="$vuetify.breakpoint.xs" class="mr-2">
+      <v-btn text :icon="$vuetify.breakpoint.xs" class="mr-2">
         <v-icon>mdi-cart-outline</v-icon
         ><span class="hidden-sm-only hidden-xs-only">Cart</span>
         <v-badge color="blue" content="6" class="ml-2"> </v-badge>

@@ -3,7 +3,7 @@
     <v-row :class="`mt-2 ${$vuetify.breakpoint.xs ? '' : 'ml-10'}`">
       <v-col cols="12" sm="12" md="8">
         <v-toolbar dense rounded elevation="0">
-          <v-toolbar-title>Cart</v-toolbar-title>
+          <v-toolbar-title v-if="!$vuetify.breakpoint.xs">Cart</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-icon class="mr-2"> mdi-truck-outline</v-icon>
           <span class="mr-4">Deliver to</span>
@@ -61,7 +61,7 @@
         <v-card :loading="loading" class="mx-auto my-7" max-width="400">
           <template slot="progress">
             <v-progress-linear
-              color="deep-purple"
+              color="primary"
               height="10"
               indeterminate
             ></v-progress-linear>
@@ -74,7 +74,7 @@
           <v-divider class="mx-4"></v-divider>
           <v-card-title>Total Amount</v-card-title>
           <v-card-actions>
-            <v-btn color="deep-purple lighten-2" text @click="reserve">
+            <v-btn color="primary darken-1" block large @click="reserve">
               <v-icon class="mr-2">mdi-check</v-icon>
               Place Order
             </v-btn>
