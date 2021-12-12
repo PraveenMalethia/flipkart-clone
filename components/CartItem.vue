@@ -1,9 +1,9 @@
 <template>
-  <v-card class="mx-auto mt-4" elevation="0">
+  <v-card class="ml-7 mt-4" elevation="0">
     <div class="d-flex flex-no-wrap justify-space-between">
       <div>
         <v-card-title class="text-h5" v-text="item.title"></v-card-title>
-        <v-card-subtitle v-text="item.artist"></v-card-subtitle>
+        <v-card-subtitle class="green--text text-h6 font-weight-bold" v-text="`₹ ${price}00`"></v-card-subtitle>
         <v-card-actions>
           <v-spacer />
           <v-btn :loading="remove" @click="Remove" icon outlined>
@@ -30,6 +30,10 @@ export default {
   props: {
     item: {
       type: Object,
+      required: true,
+    },
+    price:{
+      type:Number,
       required: true,
     },
   },

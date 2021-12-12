@@ -28,7 +28,7 @@
           <v-container fluid>
             <v-row dense>
               <div v-for="i in 6" :key="i">
-                <CartItem :item="item"/>
+                <CartItem :item="item" :price="i"/>
               </div>
             </v-row>
           </v-container>
