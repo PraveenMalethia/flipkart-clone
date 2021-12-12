@@ -10,8 +10,8 @@
     <Deals />
     <Clothing />
     <FastFood />
-    <Kitchen />
     <Smartphones />
+    <Kitchen />
     <template>
       <div class="text-center mt-7">
         <v-pagination v-model="page" :length="6"></v-pagination>

@@ -10,7 +10,7 @@
     </v-toolbar>
     <v-slide-group v-model="model" class="pa-2" active-class="success">
       <v-slide-item v-for="n in 15" :key="n">
-        <Product />
+        <Product product_image="product1.jpg"/>
       </v-slide-item>
     </v-slide-group>
   </div>

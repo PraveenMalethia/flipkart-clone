@@ -7,7 +7,7 @@
       height="250"
       width="200"
     >
-      <v-img :aspect-ratio="16 / 14" src="/product1.jpg">
+      <v-img :aspect-ratio="16 / 14" :src="product_image">
         <v-expand-transition>
           <div
             v-if="hover"
@@ -28,6 +28,7 @@
           right
           top
           small
+          depressed
           :loading="loading"
         >
           <v-icon>mdi-cart-outline</v-icon>
@@ -43,6 +44,12 @@
 
 <script>
 export default {
+  props:{
+    product_image:{
+      type:String,
+      default:''
+    },
+  },
   data: () => ({
     loading: false,
   }),
