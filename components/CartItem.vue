@@ -3,7 +3,10 @@
     <div class="d-flex flex-no-wrap justify-space-between">
       <div>
         <v-card-title class="text-h5" v-text="item.title"></v-card-title>
-        <v-card-subtitle class="green--text text-h6 font-weight-bold" v-text="`₹ ${price}00`"></v-card-subtitle>
+        <v-card-subtitle
+          class="green--text text-h6 font-weight-bold"
+          v-text="`₹ ${price}00`"
+        ></v-card-subtitle>
         <v-card-actions>
           <v-spacer />
           <v-btn :loading="remove" @click="Remove" icon outlined>
@@ -32,8 +35,8 @@ export default {
       type: Object,
       required: true,
     },
-    price:{
-      type:Number,
+    price: {
+      type: Number,
       required: true,
     },
   },

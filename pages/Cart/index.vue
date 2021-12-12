@@ -17,18 +17,27 @@
           ></v-select>
         </v-toolbar>
         <v-list three-line>
+          <v-divider></v-divider>
           <v-toolbar elevation="0">
             <v-toolbar-title>Cart Items</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn :loading="deleting_all" @click="DeleteAll" depressed outlined color="red" dark>
+            <v-btn
+              :loading="deleting_all"
+              @click="DeleteAll"
+              depressed
+              outlined
+              color="red"
+              dark
+            >
               <v-icon>mdi-delete-outline</v-icon>
               Delete all
             </v-btn>
           </v-toolbar>
+          <v-divider></v-divider>
           <v-container fluid>
             <v-row dense>
               <div v-for="i in 6" :key="i">
-                <CartItem :item="item" :price="i"/>
+                <CartItem :item="item" :price="i" />
               </div>
             </v-row>
           </v-container>
@@ -46,13 +55,19 @@
           </template>
           <v-card-title>PRICE DETAILS</v-card-title>
           <v-divider></v-divider>
-          <v-card-title>Price (2 items)</v-card-title>
+          <v-card-title>Price (6 items) </v-card-title>
           <v-card-title>Discount</v-card-title>
           <v-card-title>Delivery Charges</v-card-title>
           <v-divider class="mx-4"></v-divider>
           <v-card-title>Total Amount</v-card-title>
           <v-card-actions>
-            <v-btn :loading="loading" color="primary darken-1" block large @click="reserve">
+            <v-btn
+              :loading="loading"
+              color="primary darken-1"
+              block
+              large
+              @click="reserve"
+            >
               <v-icon class="mr-2">mdi-check</v-icon>
               Place Order
             </v-btn>
@@ -73,7 +88,7 @@
 <script>
 export default {
   data: () => ({
-    deleting_all:false,
+    deleting_all: false,
     e2: 'Texas',
     states: ['Churiwala Dhanna', 'Luxury PG'],
     item: {
@@ -88,10 +103,10 @@ export default {
       this.loading = true
       setTimeout(() => (this.loading = false), 2000)
     },
-    DeleteAll(){
+    DeleteAll() {
       this.deleting_all = true
       setTimeout(() => (this.deleting_all = false), 2000)
-    }
+    },
   },
 }
 </script>
