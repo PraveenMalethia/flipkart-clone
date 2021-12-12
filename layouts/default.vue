@@ -75,7 +75,7 @@
         <v-icon>mdi-account-outline</v-icon
         ><span class="hidden-sm-only hidden-xs-only">Account</span>
       </v-btn>
-      <v-btn text :icon="$vuetify.breakpoint.xs" class="mr-2">
+      <v-btn link to="/Cart" text :icon="$vuetify.breakpoint.xs" class="mr-2">
         <v-icon>mdi-cart-outline</v-icon
         ><span class="hidden-sm-only hidden-xs-only">Cart</span>
         <v-badge color="blue" content="6" class="ml-2"> </v-badge>
