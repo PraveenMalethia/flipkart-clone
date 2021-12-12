@@ -27,33 +27,9 @@
           </v-toolbar>
           <v-container fluid>
             <v-row dense>
-              <v-card class="mx-auto mt-4" v-for="i in 6" :key="i" elevation="0">
-                <div class="d-flex flex-no-wrap justify-space-between">
-                  <div>
-                    <v-card-title
-                      class="text-h5"
-                      v-text="item.title"
-                    ></v-card-title>
-                    <v-card-subtitle v-text="item.artist"></v-card-subtitle>
-                    <v-card-actions>
-                      <v-spacer />
-                      <v-btn icon outlined>
-                        <v-icon>mdi-minus</v-icon>
-                      </v-btn>
-                      <span class="ml-4 mr-4">5</span>
-                      <v-btn icon outlined>
-                        <v-icon>mdi-plus</v-icon>
-                      </v-btn>
-                      <v-btn icon>
-                        <v-icon color="red">mdi-delete-outline</v-icon>
-                      </v-btn>
-                    </v-card-actions>
-                  </div>
-                  <v-avatar class="ma-3" size="125" tile>
-                    <v-img class="rounded" src="/feature4.jpg"></v-img>
-                  </v-avatar>
-                </div>
-              </v-card>
+              <div v-for="i in 6" :key="i">
+                <CartItem :item="item"/>
+              </div>
             </v-row>
           </v-container>
         </v-list>
@@ -76,7 +52,7 @@
           <v-divider class="mx-4"></v-divider>
           <v-card-title>Total Amount</v-card-title>
           <v-card-actions>
-            <v-btn color="primary darken-1" block large @click="reserve">
+            <v-btn :loading="loading" color="primary darken-1" block large @click="reserve">
               <v-icon class="mr-2">mdi-check</v-icon>
               Place Order
             </v-btn>
@@ -100,20 +76,6 @@ export default {
     deleting_all:false,
     e2: 'Texas',
     states: ['Churiwala Dhanna', 'Luxury PG'],
-    cards: [
-      {
-        title: 'Pre-fab homes',
-        src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
-      },
-      {
-        title: 'Favorite road trips',
-        src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
-      },
-      {
-        title: 'Best airlines',
-        src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
-      },
-    ],
     item: {
       src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
       title: 'Halcyon Days',
