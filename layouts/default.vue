@@ -46,7 +46,12 @@
         </div>
       </template>
     </v-navigation-drawer>
-    <v-app-bar fixed app elevate-on-scroll scroll-target="#scrolling-techniques-7">
+    <v-app-bar
+      fixed
+      app
+      elevate-on-scroll
+      scroll-target="#scrolling-techniques-7"
+    >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -71,7 +76,13 @@
         <v-icon>mdi-login</v-icon>
         <span class="hidden-sm-only hidden-xs-only">Login</span>
       </v-btn>
-      <v-btn link to="/Profile" text :icon="$vuetify.breakpoint.xs" class="mr-2">
+      <v-btn
+        link
+        to="/Profile"
+        text
+        :icon="$vuetify.breakpoint.xs"
+        class="mr-2"
+      >
         <v-icon>mdi-account-outline</v-icon
         ><span class="hidden-sm-only hidden-xs-only">Account</span>
       </v-btn>
@@ -82,6 +93,12 @@
       </v-btn>
     </v-app-bar>
     <v-main>
+      <v-snackbar :timeout="-1" rounded="pill" top v-model="$nuxt.isOffline">
+        You are Offline
+      </v-snackbar>
+      <v-snackbar :timeout="-1" rounded="pill" top v-model="$nuxt.isOnline">
+        You are Back Online
+      </v-snackbar>
       <Nuxt />
     </v-main>
   </v-app>
@@ -96,13 +113,7 @@ export default {
       selectedItem: 1,
       search: null,
       select: null,
-      states: [
-        'Apple',
-        'Samsung',
-        'Panasonic',
-        'Unilever',
-        'Nestle',
-      ],
+      states: ['Apple', 'Samsung', 'Panasonic', 'Unilever', 'Nestle'],
       drawer: false,
       items: [
         {
