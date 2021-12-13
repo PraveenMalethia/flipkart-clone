@@ -11,7 +11,7 @@
         <v-expand-transition>
           <div
             v-if="hover"
-            class="d-flex transition-fast-in-fast-out grey darken-3 v-card--reveal text-h6 white--text"
+            class="d-flex transition-fast-in-fast-out black darken-3 v-card--reveal text-h6 white--text"
             style="height: 100%"
           >
             $14.99
@@ -71,7 +71,7 @@ export default {
   align-items: center;
   bottom: 0;
   justify-content: center;
-  opacity: 0.7;
+  opacity: 0.6;
   position: absolute;
   width: 100%;
 }
