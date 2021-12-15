@@ -96,9 +96,6 @@
       <v-snackbar :timeout="-1" rounded="pill" top v-model="$nuxt.isOffline">
         You are Offline
       </v-snackbar>
-      <v-snackbar :timeout="-1" rounded="pill" top v-model="$nuxt.isOnline">
-        You are Back Online
-      </v-snackbar>
       <Nuxt />
     </v-main>
   </v-app>
