@@ -52,14 +52,14 @@ export default {
       setTimeout(() => {
         this.add = false
         this.quantity = this.quantity + 1
-      }, 2000)
+      }, 500)
     },
     Remove() {
       this.remove = true
       setTimeout(() => {
         this.quantity = this.quantity - 1
         this.remove = false
-      }, 2000)
+      }, 500)
     },
   },
 }

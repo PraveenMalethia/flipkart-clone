@@ -42,6 +42,42 @@ export default {
         name: 'Fast Food',
         image: '/grocery.png',
       },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
+      {
+        name: 'Fast Food',
+        image: '/grocery.png',
+      },
     ],
     time: new Date().toLocaleTimeString(),
   }),
