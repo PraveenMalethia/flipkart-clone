@@ -93,8 +93,7 @@ export default {
     states: ['Churiwala Dhanna', 'Luxury PG'],
     item: {
       src: '/iphone1.jfif',
-      title: 'Halcyon Days',
-      artist: 'Ellie Goulding',
+      title: 'iPhone 12',
     },
     loading: false,
   }),
