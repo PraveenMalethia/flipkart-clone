@@ -21,7 +21,7 @@
           </template>
         </v-breadcrumbs>
         <div class="ms-7">
-          <h2 class="black--text font-weight-regular">
+          <h2 class="font-weight-regular">
             Apple iPhone 12 (Pacific Blue , 256 GB)
           </h2>
           <v-btn small elevation="0" class="black--text">
