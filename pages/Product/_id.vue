@@ -61,14 +61,14 @@
       </v-col>
     </v-row>
     <v-footer app bottom fixed padless>
-      <v-bottom-navigation>
+      <v-bottom-navigation background-color="primary" dark>
         <v-spacer />
-        <v-btn>
+        <v-btn :loading="loading1" @click="AddToCart">
           <span>Add to cart</span>
           <v-icon>mdi-cart-outline</v-icon>
         </v-btn>
         <v-spacer />
-        <v-btn>
+        <v-btn :loading="loading2" @click="BuyNow">
           <span>Buy Now</span>
           <v-icon>mdi-flash</v-icon>
         </v-btn>
@@ -82,6 +82,8 @@
 export default {
   data() {
     return {
+      loading1: false,
+      loading2: false,
       breadCrumbs: [
         {
           text: 'Home',
@@ -115,6 +117,20 @@ export default {
       ],
     }
   },
+  methods: {
+    AddToCart(){
+      this.loading1 = true;
+      setTimeout(() => {
+        this.loading1 = false
+        }, 500)
+    },
+    BuyNow(){
+      this.loading2 = true;
+      setTimeout(() => {
+        this.loading2 = false
+        }, 500)
+    }
+  }
 }
 </script>
 
