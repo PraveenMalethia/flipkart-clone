@@ -12,6 +12,18 @@
               ></v-carousel-item>
             </v-carousel>
           </template>
+          <v-card-actions v-show="!$vuetify.breakpoint.xs">
+            <v-btn
+              :loading="loading1"
+              color="primary darken-1"
+              block
+              large
+              @click="AddToCart"
+            >
+              <v-icon left>mdi-cart-outline</v-icon>
+              Add To Cart
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" sm="12" md="7">
@@ -29,7 +41,6 @@
           </v-btn>
           <span>1,036 Ratings & 71 Reviews</span>
           <h1 class="mt-4 mb-4">₹ 1,19,900
-
           <v-chip class="ma-2" color="teal" text-color="white">
             <v-avatar left>
               <v-icon>mdi-checkbox-marked-circle</v-icon>
@@ -62,7 +73,7 @@
         </div>
       </v-col>
     </v-row>
-    <v-footer app bottom fixed padless>
+    <v-footer v-show="$vuetify.breakpoint.xs" app bottom fixed padless>
       <v-bottom-navigation background-color="primary" dark>
         <v-spacer />
         <v-btn :loading="loading1" @click="AddToCart">
