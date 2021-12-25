@@ -37,6 +37,20 @@
             </v-list-group>
           </v-list>
         </v-card>
+        <v-card class="mt-4">
+          <v-list flat>
+            <v-list-item-group color="primary">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-power</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>LOGOUT</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-card>
       </v-col>
     </v-row>
   </div>
@@ -60,20 +74,21 @@ export default {
       {
         action: 'mdi-account-outline',
         active: true,
-        items: [
-          { title: 'Profile Information' },
-          { title: 'Manage Address' },
-        ],
+        items: [{ title: 'Profile Information' }, { title: 'Manage Address' }],
         title: 'ACCOUNT SETTINGS',
       },
       {
         action: 'mdi-currency-inr',
-        items: [{ title: 'Saved UPI' },{title: 'Saved Cards'}],
+        items: [{ title: 'Saved UPI' }, { title: 'Saved Cards' }],
         title: 'PAYMENTS',
       },
       {
         action: 'mdi-folder-account',
-        items: [{ title: 'My Reviews and ratings' },{title: 'All Notifications'},{title: 'My Wishlist'}],
+        items: [
+          { title: 'My Reviews and ratings' },
+          { title: 'All Notifications' },
+          { title: 'My Wishlist' },
+        ],
         title: 'MY STUFF',
       },
     ],
