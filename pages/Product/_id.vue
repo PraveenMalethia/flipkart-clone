@@ -122,7 +122,7 @@
           </v-card>
       </v-col>
     </v-row>
-    <v-footer v-show="$vuetify.breakpoint.xs" app bottom fixed padless>
+    <v-footer v-if="$vuetify.breakpoint.xs" app bottom fixed padless>
       <v-bottom-navigation background-color="primary" dark>
         <v-spacer />
         <v-btn :loading="loading1" @click="AddToCart">
