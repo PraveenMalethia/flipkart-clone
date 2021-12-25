@@ -13,16 +13,26 @@
             </v-carousel>
           </template>
           <v-card-actions v-show="!$vuetify.breakpoint.xs">
+            <v-spacer/>
             <v-btn
               :loading="loading1"
-              color="primary darken-1"
-              block
+              color="primary lighten-1"
               large
               @click="AddToCart"
             >
               <v-icon left>mdi-cart-outline</v-icon>
               Add To Cart
             </v-btn>
+            <v-btn
+              :loading="loading2"
+              color="primary darken-1"
+              large
+              @click="BuyNow"
+            >
+              <v-icon left>mdi-flash</v-icon>
+              <span class="mr-5"> Buy Now</span>
+            </v-btn>
+            <v-spacer/>
           </v-card-actions>
         </v-card>
       </v-col>
