@@ -39,7 +39,7 @@
         </v-card>
         <v-card class="mt-4">
           <v-list flat>
-            <v-list-item-group color="primary">
+            <v-list-item-group color="red">
               <v-list-item>
                 <v-list-item-icon>
                   <v-icon>mdi-power</v-icon>
