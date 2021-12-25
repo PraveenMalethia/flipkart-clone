@@ -1,8 +1,10 @@
-export const state = {
-  categories: [],
-  products: [],
-  cart: [],
-  brands: [],
+export const state = () => {
+  return {
+    categories: [],
+    products: [],
+    cart: [],
+    brands: [],
+  }
 }
 
 export const getters = {
