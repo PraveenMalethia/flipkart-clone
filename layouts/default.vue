@@ -1,5 +1,5 @@
 <template>
-  <v-app dark id="scrolling-techniques-7">
+  <v-app dark>
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" fixed app>
       <v-list dense nav>
         <v-list-item>
