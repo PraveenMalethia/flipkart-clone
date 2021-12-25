@@ -90,7 +90,7 @@
               <v-spacer></v-spacer>
               <v-btn text>
                 Rate Product
-                <v-icon right>mdi-star-outline</v-icon>
+                <v-icon right color="yellow darken-2">mdi-star</v-icon>
               </v-btn>
             </v-app-bar>
             <v-list three-line>
