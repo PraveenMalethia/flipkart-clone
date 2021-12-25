@@ -29,11 +29,7 @@
           </v-btn>
           <span>1,036 Ratings & 71 Reviews</span>
           <h1 class="mt-4 mb-4">₹ 1,19,900</h1>
-          <v-chip
-            class="ma-2"
-            color="teal"
-            text-color="white"
-          >
+          <v-chip class="ma-2" color="teal" text-color="white">
             <v-avatar left>
               <v-icon>mdi-checkbox-marked-circle</v-icon>
             </v-avatar>
@@ -44,19 +40,41 @@
             <div :class="!$vuetify.breakpoint.xs && 'ml-10'">
               <ul>
                 <li class="mt-2">64 GB ROM</li>
-                <li class="mt-2">13.72 cm (5.4 inch) Super Retina XDR Display</li>
+                <li class="mt-2">
+                  13.72 cm (5.4 inch) Super Retina XDR Display
+                </li>
                 <li class="mt-2">12MP + 12MP | 12MP Front Camera</li>
-                <li class="mt-2">A14 Bionic Chip with Next Generation Neural Engine Processor</li>
+                <li class="mt-2">
+                  A14 Bionic Chip with Next Generation Neural Engine Processor
+                </li>
                 <li class="mt-2">Ceramic Shield</li>
                 <li class="mt-2">Industry-leading IP68 Water Resistance</li>
                 <li class="mt-2">All Screen OLED Display</li>
-                <li class="mt-2">12MP TrueDepth Front Camera with Night Mode, 4K Dolby Vision HDR Recording</li>
+                <li class="mt-2">
+                  12MP TrueDepth Front Camera with Night Mode, 4K Dolby Vision
+                  HDR Recording
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </v-col>
     </v-row>
+    <v-footer app bottom fixed padless>
+      <v-bottom-navigation>
+        <v-spacer />
+        <v-btn>
+          <span>Add to cart</span>
+          <v-icon>mdi-cart-outline</v-icon>
+        </v-btn>
+        <v-spacer />
+        <v-btn>
+          <span>Buy Now</span>
+          <v-icon>mdi-flash</v-icon>
+        </v-btn>
+        <v-spacer />
+      </v-bottom-navigation>
+    </v-footer>
   </div>
 </template>
 
