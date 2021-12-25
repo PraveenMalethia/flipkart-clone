@@ -2,7 +2,7 @@
   <div class="container mt-10">
     <v-row>
       <v-col cols="12" sm="12" md="5">
-        <v-card elevation="0">
+        <v-card elevation="0" class="fixed">
           <template>
             <v-carousel hide-delimiter-background :show-arrows="false">
               <v-carousel-item
@@ -13,7 +13,7 @@
             </v-carousel>
           </template>
           <v-card-actions v-show="!$vuetify.breakpoint.xs">
-            <v-spacer/>
+            <v-spacer />
             <v-btn
               :loading="loading1"
               color="primary lighten-1"
@@ -32,7 +32,7 @@
               <v-icon left>mdi-flash</v-icon>
               <span class="mr-5"> Buy Now</span>
             </v-btn>
-            <v-spacer/>
+            <v-spacer />
           </v-card-actions>
         </v-card>
       </v-col>
@@ -46,17 +46,18 @@
           <h2 class="font-weight-regular">
             Apple iPhone 12 (Pacific Blue , 256 GB)
           </h2>
-          <v-btn small elevation="0" >
+          <v-btn small elevation="0">
             4 <v-icon color="yellow darken-2">mdi-star</v-icon>
           </v-btn>
           <span>1,036 Ratings & 71 Reviews</span>
-          <h1 class="mt-4 mb-4">₹ 1,19,900
-          <v-chip class="ma-2" color="teal" text-color="white">
-            <v-avatar left>
-              <v-icon>mdi-checkbox-marked-circle</v-icon>
-            </v-avatar>
-            In Stock
-          </v-chip>
+          <h1 class="mt-4 mb-4">
+            ₹ 1,19,900
+            <v-chip class="ma-2" color="teal" text-color="white">
+              <v-avatar left>
+                <v-icon>mdi-checkbox-marked-circle</v-icon>
+              </v-avatar>
+              In Stock
+            </v-chip>
           </h1>
           <div>
             <h3 class="grey--text">Description :</h3>
@@ -80,6 +81,46 @@
               </ul>
             </div>
           </div>
+          <v-card class="mt-10">
+            <v-app-bar flat color="rgba(0, 0, 0, 0)">
+              <v-toolbar-title class="text-h6 pl-0">
+                Ratings and reviews
+              </v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-btn text>
+                Rate Product
+                <v-icon right>mdi-star-outline</v-icon>
+              </v-btn>
+            </v-app-bar>
+            <v-list three-line>
+              <template v-for="(item, index) in ratings">
+                <v-subheader
+                  v-if="item.header"
+                  :key="item.header"
+                  v-text="item.header"
+                ></v-subheader>
+
+                <v-divider
+                  v-else-if="item.divider"
+                  :key="index"
+                  :inset="item.inset"
+                ></v-divider>
+
+                <v-list-item v-else :key="item.title">
+                  <v-list-item-avatar>
+                    <v-img :src="item.avatar"></v-img>
+                  </v-list-item-avatar>
+
+                  <v-list-item-content>
+                    <v-list-item-title v-html="item.title"></v-list-item-title>
+                    <v-list-item-subtitle
+                      v-html="item.subtitle"
+                    ></v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </template>
+            </v-list>
+          </v-card>
         </div>
       </v-col>
     </v-row>
@@ -138,23 +179,63 @@ export default {
           src: '/iphone1.jfif',
         },
       ],
+      ratings: [
+        { header: 'Today' },
+        {
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+          title: 'Brunch this weekend?',
+          subtitle: `<span class="text--primary">Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+          title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
+          subtitle: `<span class="text--primary">to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.`,
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+          title: 'Oui oui',
+          subtitle:
+            '<span class="text--primary">Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?',
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+          title: 'Birthday gift',
+          subtitle:
+            '<span class="text--primary">Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?',
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
+          title: 'Recipe to try',
+          subtitle:
+            '<span class="text--primary">Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
+        },
+      ],
     }
   },
   methods: {
-    AddToCart(){
-      this.loading1 = true;
+    AddToCart() {
+      this.loading1 = true
       setTimeout(() => {
         this.loading1 = false
-        }, 500)
+      }, 500)
     },
-    BuyNow(){
-      this.loading2 = true;
+    BuyNow() {
+      this.loading2 = true
       setTimeout(() => {
         this.loading2 = false
-        }, 500)
-    }
-  }
+      }, 500)
+    },
+  },
 }
 </script>
 
-<style></style>
+<style>
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}</style>
