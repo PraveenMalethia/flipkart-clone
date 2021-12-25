@@ -24,7 +24,7 @@
           <h2 class="font-weight-regular">
             Apple iPhone 12 (Pacific Blue , 256 GB)
           </h2>
-          <v-btn small elevation="0" class="black--text">
+          <v-btn small elevation="0" >
             4 <v-icon color="yellow darken-2">mdi-star</v-icon>
           </v-btn>
           <span>1,036 Ratings & 71 Reviews</span>
