@@ -6,6 +6,7 @@
           <template>
             <v-carousel hide-delimiter-background :show-arrows="false">
               <v-carousel-item
+              class="zoom"
                 v-for="(item, i) in items"
                 :key="i"
                 :src="item.src"
@@ -82,44 +83,44 @@
             </div>
           </div>
         </div>
-          <v-card class="mt-10">
-            <v-app-bar flat color="rgba(0, 0, 0, 0)">
-              <v-toolbar-title class="text-h6 pl-0">
-                Ratings and reviews
-              </v-toolbar-title>
-              <v-spacer></v-spacer>
-              <v-btn text>
-                Rate Product
-                <v-icon right color="yellow darken-2">mdi-star</v-icon>
-              </v-btn>
-            </v-app-bar>
-            <v-list three-line>
-              <template v-for="(item, index) in ratings">
-                <v-subheader
-                  v-if="item.header"
-                  :key="item.header"
-                  v-text="item.header"
-                ></v-subheader>
+        <v-card class="mt-10">
+          <v-app-bar flat color="rgba(0, 0, 0, 0)">
+            <v-toolbar-title class="text-h6 pl-0">
+              Ratings and reviews
+            </v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn text>
+              Rate Product
+              <v-icon right color="yellow darken-2">mdi-star</v-icon>
+            </v-btn>
+          </v-app-bar>
+          <v-list three-line>
+            <template v-for="(item, index) in ratings">
+              <v-subheader
+                v-if="item.header"
+                :key="item.header"
+                v-text="item.header"
+              ></v-subheader>
 
-                <v-divider
-                  v-else-if="item.divider"
-                  :key="index"
-                  :inset="item.inset"
-                ></v-divider>
-                <v-list-item v-else :key="item.title">
-                  <v-list-item-avatar>
-                    <v-img :src="item.avatar"></v-img>
-                  </v-list-item-avatar>
-                  <v-list-item-content>
-                    <v-list-item-title v-html="item.title"></v-list-item-title>
-                    <v-list-item-subtitle
-                      v-html="item.subtitle"
-                    ></v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-              </template>
-            </v-list>
-          </v-card>
+              <v-divider
+                v-else-if="item.divider"
+                :key="index"
+                :inset="item.inset"
+              ></v-divider>
+              <v-list-item v-else :key="item.title">
+                <v-list-item-avatar>
+                  <v-img :src="item.avatar"></v-img>
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title v-html="item.title"></v-list-item-title>
+                  <v-list-item-subtitle
+                    v-html="item.subtitle"
+                  ></v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </template>
+          </v-list>
+        </v-card>
       </v-col>
     </v-row>
     <v-footer v-if="$vuetify.breakpoint.xs" app bottom fixed padless>
@@ -181,7 +182,7 @@ export default {
         {
           avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
           title: 'Praveen Malethia',
-          subtitle: "Awesome Product",
+          subtitle: 'Awesome Product',
         },
         { divider: true, inset: true },
         {
@@ -244,4 +245,14 @@ export default {
   position: sticky;
   top: 0;
   z-index: 0;
-}</style>
+}
+
+.zoom:hover {
+  transform: scale(
+    1.1
+  );
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+}
+</style>
