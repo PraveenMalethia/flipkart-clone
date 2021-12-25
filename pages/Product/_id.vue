@@ -28,7 +28,10 @@
             4 <v-icon color="yellow darken-2">mdi-star</v-icon>
           </v-btn>
           <span>1,036 Ratings & 71 Reviews</span>
-          <h1 class="mt-4">₹ 1,19,900</h1>
+          <h1 class="mt-4 mb-4">₹ 1,19,900</h1>
+          <div>
+            <h3 class="gray--text">Highlights</h3>
+          </div>
         </div>
       </v-col>
     </v-row>
