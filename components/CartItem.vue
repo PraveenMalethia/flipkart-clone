@@ -22,7 +22,7 @@
         </v-card-actions>
       </div>
       <v-avatar class="ma-3" size="125" tile>
-        <v-img class="rounded" src="/feature4.jpg"></v-img>
+        <v-img class="rounded" src="/iphone1.jfif"></v-img>
       </v-avatar>
     </div>
   </v-card>

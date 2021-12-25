@@ -92,7 +92,7 @@ export default {
     e2: 'Texas',
     states: ['Churiwala Dhanna', 'Luxury PG'],
     item: {
-      src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+      src: '/iphone1.jfif',
       title: 'Halcyon Days',
       artist: 'Ellie Goulding',
     },
