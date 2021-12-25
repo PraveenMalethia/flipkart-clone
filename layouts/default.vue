@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" fixed app>
+    <v-navigation-drawer v-model="drawer" fixed app>
       <v-list dense nav>
         <v-list-item>
           <v-list-item-content>
@@ -52,9 +52,6 @@
       elevate-on-scroll
       >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <v-autocomplete
@@ -143,7 +140,6 @@ export default {
           to: '/About',
         },
       ],
-      miniVariant: false,
       rightDrawer: false,
       title: 'Basketiya',
     }
