@@ -28,13 +28,15 @@
             4 <v-icon color="yellow darken-2">mdi-star</v-icon>
           </v-btn>
           <span>1,036 Ratings & 71 Reviews</span>
-          <h1 class="mt-4 mb-4">₹ 1,19,900</h1>
+          <h1 class="mt-4 mb-4">₹ 1,19,900
+
           <v-chip class="ma-2" color="teal" text-color="white">
             <v-avatar left>
               <v-icon>mdi-checkbox-marked-circle</v-icon>
             </v-avatar>
             In Stock
           </v-chip>
+          </h1>
           <div>
             <h3 class="grey--text">Description :</h3>
             <div :class="!$vuetify.breakpoint.xs && 'ml-10'">
