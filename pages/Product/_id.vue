@@ -29,7 +29,7 @@
               large
               @click="BuyNow"
             >
-              <v-icon left>mdi-flash</v-icon>
+              <v-icon left>mdi-flash-outline</v-icon>
               <span class="mr-5"> Buy Now</span>
             </v-btn>
             <v-spacer />
@@ -132,7 +132,7 @@
         <v-spacer />
         <v-btn :loading="loading2" @click="BuyNow">
           <span>Buy Now</span>
-          <v-icon>mdi-flash</v-icon>
+          <v-icon>mdi-flash-outline</v-icon>
         </v-btn>
         <v-spacer />
       </v-bottom-navigation>
